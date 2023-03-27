@@ -1,4 +1,3 @@
-import allure
 import pytest
 from selenium.webdriver import Chrome
 from selenium.webdriver import Firefox
@@ -7,7 +6,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver import Remote
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyjavaproperties import Properties
-from allure_commons.types import AttachmentType
 
 
 class BaseSetup:
