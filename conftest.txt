@@ -1,0 +1,8 @@
+import pytest
+from allure_commons.types import AttachmentType
+
+@pytest.fixture(scope="function", autouse=True)
+def allure_report(request, driver):
+    yield
+    if request.node.rep_call.failed:
+        allure.attach(driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
